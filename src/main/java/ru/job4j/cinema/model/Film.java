@@ -9,10 +9,10 @@ public class Film {
             "name", "name",
             "description", "description",
             "year", "year",
-            "minimalAge", "minimalAge",
-            "durationImMinutes", "durationImMinutes",
-            "genreId", "genreId",
-            "fileId", "fileId"
+            "genre_id", "minimalAge",
+            "minimal_age", "durationImMinutes",
+            "duration_in_minutes", "genreId",
+            "file_id", "fileId"
     );
     private int id;
     private String name;

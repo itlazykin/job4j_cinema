@@ -7,11 +7,11 @@ import java.util.Objects;
 public class FilmSession {
     public static final Map<String, String> COLUMN_MAPPING = Map.of(
             "id", "id",
-            "startTime", "startTime",
-            "endTime", "endTime",
+            "start_time", "startTime",
+            "end_time", "endTime",
             "price", "price",
-            "filmId", "filmId",
-            "hallId", "hallId"
+            "film_id", "filmId",
+            "halls_id", "hallId"
     );
     private int id;
     private LocalDateTime startTime;
