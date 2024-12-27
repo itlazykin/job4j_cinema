@@ -15,7 +15,7 @@ public class Hall {
     private String name;
     private int rowCount;
     private int placeCount;
-    String description;
+    private String description;
 
     public int getId() {
         return id;
