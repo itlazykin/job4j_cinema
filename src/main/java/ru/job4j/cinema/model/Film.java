@@ -10,7 +10,7 @@ public class Film {
             "description", "description",
             "year", "year",
             "genre_id", "minimalAge",
-            "minimal_age", "durationImMinutes",
+            "minimal_age", "durationInMinutes",
             "duration_in_minutes", "genreId",
             "file_id", "fileId"
     );
@@ -19,7 +19,7 @@ public class Film {
     private String description;
     private int year;
     private int minimalAge;
-    private int durationImMinutes;
+    private int durationInMinutes;
     private int genreId;
     private int fileId;
 
@@ -32,7 +32,7 @@ public class Film {
         this.description = description;
         this.year = year;
         this.minimalAge = minimalAge;
-        this.durationImMinutes = durationImMinutes;
+        this.durationInMinutes = durationImMinutes;
         this.genreId = genreId;
         this.fileId = fileId;
     }
@@ -78,11 +78,11 @@ public class Film {
     }
 
     public int getDurationImMinutes() {
-        return durationImMinutes;
+        return durationInMinutes;
     }
 
     public void setDurationImMinutes(int durationImMinutes) {
-        this.durationImMinutes = durationImMinutes;
+        this.durationInMinutes = durationImMinutes;
     }
 
     public int getGenreId() {
