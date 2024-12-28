@@ -13,7 +13,6 @@ import ru.job4j.cinema.service.ticket.TicketService;
 @RequestMapping("/tickets")
 @ThreadSafe
 public class TicketController {
-
     private final TicketService ticketService;
 
     public TicketController(TicketService ticketService) {
@@ -24,12 +23,11 @@ public class TicketController {
     public String buyTicket(@ModelAttribute Ticket ticket, Model model) {
         var result = ticketService.buyTicket(ticket);
         if (result.isEmpty()) {
-            model.addAttribute("message", "Не удалось купить билет. "
-                    + "Выбранное Вами место - занято.");
-            return "tickets/failure";
+            model.addAttribute("message", "Место занято =( Выберете другое.");
+            return "tickets/fail";
         }
         model.addAttribute("message",
-                String.format("Билет приобретен на : ряд, место с номерами: %d, %d",
+                String.format("Куплен билет на место (ряд, место) с номерами: %d, %d",
                         ticket.getRowNumber(),
                         ticket.getPlaceNumber()
                 )
