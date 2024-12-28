@@ -7,6 +7,6 @@ insert into files (name, path) values ('green_mile', 'files/green_mile.jpg');
 insert into files (name, path) values ('the_lord_of_the_rings', 'files/lord_of_the_rings.jpg');
 insert into files (name, path) values ('interstellar', 'files/interstellar.jpg');
 insert into files (name, path) values ('seven', 'files/seven.jpg');
-insert into files (name, path) values ('sherlock_holms', 'files/sherlock.jpg');
+insert into files (name, path) values ('sherlock_holms', 'files/sherlock.jpeg');
 
 
