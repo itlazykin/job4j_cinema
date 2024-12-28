@@ -12,11 +12,10 @@ import org.sql2o.quirks.Quirks;
 
 import javax.sql.DataSource;
 import java.sql.Timestamp;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Configuration
-public class DataSourceConfiguration {
+public class DatasourceConfiguration {
     @Bean
     public DataSource connectionPool(@Value("${datasource.url}") String url,
                                      @Value("{$datasource.username}") String username,
@@ -38,7 +37,7 @@ public class DataSourceConfiguration {
     private Quirks createConverters() {
         return new NoQuirks() {
             {
-                converters.put(LocalDate.class, new Converter<LocalDateTime>() {
+                converters.put(LocalDateTime.class, new Converter<LocalDateTime>() {
                     @Override
                     public LocalDateTime convert(Object o) throws ConverterException {
                         if (o == null) {
