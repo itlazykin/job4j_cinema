@@ -18,8 +18,8 @@ import java.time.LocalDateTime;
 public class DatasourceConfiguration {
     @Bean
     public DataSource connectionPool(@Value("${datasource.url}") String url,
-                                     @Value("{$datasource.username}") String username,
-                                     @Value("{$datasource.password}") String password) {
+                                     @Value("${datasource.username}") String username,
+                                     @Value("${datasource.password}") String password) {
         return new BasicDataSource() {
             {
                 setUrl(url);
