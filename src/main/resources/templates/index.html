@@ -14,6 +14,10 @@
     <header th:insert="blocks/header :: header"></header>
     <div class="container mt-2">
         <h3>Проект job4j_cinema</h3>
+        <ul>
+            <li><a th:href="@{/films}">Афиша</a></li>
+            <li><a th:href="@{/sessions}">Расписание сеансов</a></li>
+        </ul>
     </div>
     <footer th:insert="~{blocks/footer :: footer}"></footer>
 </div>
