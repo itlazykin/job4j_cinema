@@ -15,20 +15,9 @@ import java.util.Optional;
 @ThreadSafe
 public class SimpleFileService implements FileService {
     private final FileRepository fileRepository;
-    private final String storageDirectory;
 
-    public SimpleFileService(FileRepository fileRepository, @Value("${file.directory}") String storageDirectory) {
+    public SimpleFileService(FileRepository fileRepository) {
         this.fileRepository = fileRepository;
-        this.storageDirectory = storageDirectory;
-        createStorageDirectory(storageDirectory);
-    }
-
-    private void createStorageDirectory(String path) {
-        try {
-            Files.createDirectories(Path.of(path));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     @Override
