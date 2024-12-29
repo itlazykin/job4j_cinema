@@ -4,20 +4,26 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Ticket {
+
     public static final Map<String, String> COLUMN_MAPPING = Map.of(
             "id", "id",
+            "session_id", "sessionId",
             "row_number", "rowNumber",
             "place_number", "placeNumber",
-            "session_id", "sessionId",
             "user_id", "userId"
     );
+
     private int id;
+    private int sessionId;
     private int rowNumber;
     private int placeNumber;
-    private int sessionId;
     private int userId;
 
-    public Ticket() {
+    public Ticket(int sessionId, int rowNumber, int placeNumber, int userId) {
+        this.sessionId = sessionId;
+        this.rowNumber = rowNumber;
+        this.placeNumber = placeNumber;
+        this.userId = userId;
     }
 
     public int getId() {
@@ -26,6 +32,14 @@ public class Ticket {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getSessionId() {
+        return sessionId;
+    }
+
+    public void setSessionId(int sessionId) {
+        this.sessionId = sessionId;
     }
 
     public int getRowNumber() {
@@ -42,14 +56,6 @@ public class Ticket {
 
     public void setPlaceNumber(int placeNumber) {
         this.placeNumber = placeNumber;
-    }
-
-    public int getSessionId() {
-        return sessionId;
-    }
-
-    public void setSessionId(int sessionId) {
-        this.sessionId = sessionId;
     }
 
     public int getUserId() {
