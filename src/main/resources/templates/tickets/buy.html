@@ -22,17 +22,17 @@
             </div>
             <div class="col m-1">
                 <ul>
-                    <li><div th:text="'Название фильма: ' + ${film.name}"/></li>
-                    <li><div th:text="'Дата выпуска: ' + ${film.year}"/></li>
-                    <li><div th:text="'Жанр: ' + ${film.genre}"/></li>
-                    <li><div th:text="'Возрастные ограничения: ' + ${film.minimalAge} + '+'"/></li>
-                    <li><div th:text="'Продолжительность: ' + ${film.durationInMinutes} + ' мин.'"/></li>
-                    <li><div th:text="'Описание: ' + ${film.description}"/></li>
+                    <li><div th:text="'Название фильма: ' + ${filmSession.film.name}"/></li>
+                    <li><div th:text="'Дата выпуска: ' + ${filmSession.film.year}"/></li>
+                    <li><div th:text="'Жанр: ' + ${filmSession.film.genre}"/></li>
+                    <li><div th:text="'Возрастные ограничения: ' + ${filmSession.film.minimalAge} + '+'"/></li>
+                    <li><div th:text="'Продолжительность: ' + ${filmSession.film.durationInMinutes} + ' мин.'"/></li>
+                    <li><div th:text="'Описание: ' + ${filmSession.film.description}"/></li>
                 </ul>
                 <ul>
+                    <li><div th:text="'Кинозал: ' + ${filmSession.hall.name}"/></li>
                     <li><div th:text="'Начало сеанса: ' + ${filmSession.startTime}"/></li>
                     <li><div th:text="'Окончание сеанса: ' + ${filmSession.endTime}"/></li>
-                    <li><div th:text="'Кинозал: ' + ${filmSession.hall.name}"/></li>
                     <li><div th:text="'Цена билета: ' + ${filmSession.price}"/></li>
                 </ul>
                 <form class="mt-3" th:action="@{/tickets/buy}" method="post">
