@@ -65,6 +65,7 @@ mvn spring-boot:run
 
 ![Регистрация](screenshots/register.png)
 
-## Контакты
-
-Telegram: @slimdenchi
+#### Контакты для связи:
+* Лазыкин Денис Андреевич;
+* +7 926 888 23 28;
+* dlazykin856@gmail.com
